@@ -31,10 +31,11 @@ class TestHiddenWord < MiniTest::Test
     assert_equal("**** *** *******", word_to_display)
   end
 
-
   def test_hidden_word_displays_correct_letters()
     word_to_display = @hidden_word.show_word(["a", "o", "z", "l"])
     assert_equal("o*** *** *a***o*", word_to_display)
   end
+
+  
 
 end
