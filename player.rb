@@ -9,12 +9,14 @@ class Player
   end
 
   def guess_letters()
-    return "over"
+    print "Enter your guess: "
+    return gets.chomp
   end
 
   def lost_life
     @lives -= 1
   end
+
 
 
 

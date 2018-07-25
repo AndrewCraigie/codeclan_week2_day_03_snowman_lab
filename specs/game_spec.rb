@@ -53,5 +53,14 @@ class TestGame < MiniTest::Test
     assert_equal(4, count)
   end
 
+  def test_game_running_false()
+    refute(@game.running())
+  end
+
+  def test_can_set_running()
+    @game.set_running(true)
+    assert(@game.running())
+  end
+
 
 end

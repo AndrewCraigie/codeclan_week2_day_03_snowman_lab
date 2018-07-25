@@ -27,7 +27,15 @@ class HiddenWord
         end
       end
     end
-    show_word.join("")
+
+    if show_word.include?("*")
+      @solved = false
+    else
+      @solved = true
+    end
+    
+    return show_word.join("")
+
   end
 
 end

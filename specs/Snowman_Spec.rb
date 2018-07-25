@@ -15,11 +15,53 @@ class TestSnowman < MiniTest::Test
     @snowman = Snowman.new()
   end
 
-  def test_snowman_can_output_welcome()
+
+  def test_outputs_welcome()
     output, error = capture_io do
-      @game.output_welcome()
+      @snowman.output_welcome()
     end
-    assert_equal("Hello I'm Snowman", output)
+    assert_equal("----------SNOWMAN----------\n\n", output)
   end
+
+  def test_game_prompts_for_player_name()
+    output, error = capture_io do
+      @snowman.display_player_name_prompt()
+    end
+    assert_equal("Enter your name player? ", output)
+  end
+
+  def test_get_player_name()
+    result = @snowman.get_player_name()
+    assert_equal('Elsa', result)
+  end
+
+  def test_snowman_creates_player()
+    player = @snowman.make_player("Elsa")
+    assert_equal("Elsa", player.name)
+  end
+
+  def test_displays_secret_word_prompt()
+    output, error = capture_io do
+      @snowman.display_secret_word_prompt()
+    end
+    assert_equal("Enter a word or phrase to guess? ", output)
+  end
+
+  def test_get_secret_word()
+    result = @snowman.get_secret_word()
+    assert_equal("rainbow", result)
+  end
+
+  def test_init_game()
+    game = @snowman.init_game("Elsa", "rainbow")
+    assert_equal(Game, game.class)
+  end
+
+  def test_can_set_game_running()
+    @snowman.set_game_running(true)
+    assert(@snowman.game.running())
+  end
+
+
 
 end
