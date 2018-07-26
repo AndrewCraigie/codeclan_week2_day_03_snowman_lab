@@ -42,7 +42,20 @@ class Game
   end
 
   def end_game()
-    p @player.name()
+
+    player_name = @player.name()
+
+    system 'clear'
+
+    if @player.lives == 0
+      #puts "You lost #{player_name}!"
+      puts "I've melted!! You lost!"
+      puts "The phrase was '#{@hidden_word.word}'"
+    end
+    if hidden_word.solved()
+      #p "#{player_name} you win!"
+      puts "YOU WIN!"
+    end
   end
 
 

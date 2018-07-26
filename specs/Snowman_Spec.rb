@@ -8,6 +8,8 @@ require_relative ('../hidden_word')
 
 class TestSnowman < MiniTest::Test
 
+  $testing = true
+
   def setup()
     @player = Player.new("Elsa of Arendelle")
     @hidden_word = HiddenWord.new("Let it go")
@@ -57,11 +59,6 @@ class TestSnowman < MiniTest::Test
     assert_equal(Game, game.class)
   end
 
-  def test_can_set_game_running()
-    @snowman.set_game_running(true)
-    assert(@snowman.game.running())
-  end
-
-
+  
 
 end

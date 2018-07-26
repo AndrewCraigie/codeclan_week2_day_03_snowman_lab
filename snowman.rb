@@ -4,6 +4,7 @@ require_relative ('hidden_word')
 
 class Snowman
 
+
   def initialize()
     @game = nil
   end
@@ -18,8 +19,8 @@ class Snowman
     secret_word = get_secret_word()
 
     @game = init_game(player, secret_word)
-
     @game.set_running(true)
+
     system 'clear'
     puts @game.hidden_word.show_word([])
 
@@ -61,19 +62,14 @@ class Snowman
   end
 
   def init_game(player_name, secret_word)
+
     player = Player.new(player_name)
     hidden_word = HiddenWord.new(secret_word)
     return Game.new(player, hidden_word)
   end
 
 
-
-
-
-
-
 end
-
 
 snowman = Snowman.new()
 snowman.start()
