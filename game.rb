@@ -26,7 +26,6 @@ class Game
       guess.chars.each {|letter| @guessed_letters.push(letter)}
       reduce_player_life()
 
-
       system 'clear'
 
     else

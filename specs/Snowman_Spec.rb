@@ -22,7 +22,7 @@ class TestSnowman < MiniTest::Test
     output, error = capture_io do
       @snowman.output_welcome()
     end
-    assert_equal("----------SNOWMAN----------\n\n", output)
+    assert_equal("----------SNOWMAN----------\n                           \n           *****           \n          *      *         \n         *  O  O  *        \n         *    >    *       \n          *   -   *        \n           *******         \n     \\   *         *  /   \n      - *     @     *-     \n        *     @     *      \n        *     @     *      \n          *       *        \n            *****          \n                           \n" , output)
   end
 
   def test_game_prompts_for_player_name()
@@ -59,6 +59,6 @@ class TestSnowman < MiniTest::Test
     assert_equal(Game, game.class)
   end
 
-  
+
 
 end

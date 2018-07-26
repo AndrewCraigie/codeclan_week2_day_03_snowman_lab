@@ -18,7 +18,7 @@ class TestPlayer < MiniTest::Test
 
   def test_player_gives_guessed_letter()
     letters_guessed = @player.guess_letters()
-    assert_equal("over", letters_guessed)
+    assert_equal("rainbow", letters_guessed)
   end
 
   def test_lost_life

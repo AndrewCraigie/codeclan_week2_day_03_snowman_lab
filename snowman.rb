@@ -2,6 +2,7 @@ require_relative ('game')
 require_relative ('player')
 require_relative ('hidden_word')
 
+
 class Snowman
 
 
@@ -38,7 +39,21 @@ class Snowman
   def output_welcome()
     system 'clear'
     puts "----------SNOWMAN----------"
-    puts ""
+    puts "                           "
+    puts "           *****           "
+    puts "          *      *         "
+    puts "         *  O  O  *        "
+    puts "         *    >    *       "
+    puts "          *   -   *        "
+    puts "           *******         "
+    puts "     \\   *         *  /   "
+    puts "      - *     @     *-     "
+    puts "        *     @     *      "
+    puts "        *     @     *      "
+    puts "          *       *        "
+    puts "            *****          "
+    puts "                           "
+
   end
 
   def display_player_name_prompt()
@@ -71,5 +86,5 @@ class Snowman
 
 end
 
-snowman = Snowman.new()
-snowman.start()
+#snowman = Snowman.new()
+#snowman.start()
