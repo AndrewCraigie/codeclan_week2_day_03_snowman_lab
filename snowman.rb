@@ -86,5 +86,5 @@ class Snowman
 
 end
 
-#snowman = Snowman.new()
-#snowman.start()
+snowman = Snowman.new()
+snowman.start()
