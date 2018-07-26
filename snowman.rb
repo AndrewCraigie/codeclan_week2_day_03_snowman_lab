@@ -76,9 +76,8 @@ class Snowman
     return gets.chomp
   end
 
-  def init_game(player_name, secret_word)
+  def init_game(player, secret_word)
 
-    player = Player.new(player_name)
     hidden_word = HiddenWord.new(secret_word)
     return Game.new(player, hidden_word)
   end
