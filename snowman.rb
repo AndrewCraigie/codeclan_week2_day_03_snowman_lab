@@ -83,7 +83,6 @@ class Snowman
     return Game.new(player, hidden_word)
   end
 
-
 end
 
 snowman = Snowman.new()

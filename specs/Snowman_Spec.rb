@@ -59,6 +59,4 @@ class TestSnowman < MiniTest::Test
     assert_equal(Game, game.class)
   end
 
-
-
 end
